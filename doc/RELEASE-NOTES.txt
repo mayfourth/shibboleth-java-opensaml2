@@ -3,6 +3,7 @@ Changes in Release 2.6.2
 [JOST-223] - Misspelled error constant in SAML 1 StatusCode interface
 [JOST-224] - Superfluous/wrong type constants in SAML 1 and SAML 2 interfaces
 [JOST-226] - Mispelled method name in SAMLMDCredentialContext, getEncryptionMethod vs getEncryptionMethods 
+[JOST-238] - https:// URLs with HttpResource or FileBackedHttpResource are vulnerable to MitM attacks (missing hostname verification)
 
 Changes in Release 2.6.1
 =============================================
