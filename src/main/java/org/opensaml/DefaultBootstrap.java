@@ -28,6 +28,7 @@ import org.opensaml.xml.XMLConfigurator;
 import org.opensaml.xml.parse.StaticBasicParserPool;
 import org.opensaml.xml.parse.XMLParserException;
 import org.opensaml.xml.security.DefaultSecurityConfigurationBootstrap;
+import org.opensaml.xml.security.x509.tls.StrictHostnameVerifier;
 import org.owasp.esapi.ESAPI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -115,7 +116,7 @@ public class DefaultBootstrap {
     protected static void initializeHttpClient() {
         if (!Boolean.getBoolean(SYSPROP_HTTPCLIENT_HTTPS_DISABLE_HOSTNAME_VERIFICATION)) {
             ProtocolSocketFactory socketFactory = 
-                    new TLSProtocolSocketFactory(null, null, org.apache.commons.ssl.HostnameVerifier.STRICT);
+                    new TLSProtocolSocketFactory(null, null, new StrictHostnameVerifier());
             Protocol.registerProtocol("https", new Protocol("https", socketFactory, 443));
         }
     }
