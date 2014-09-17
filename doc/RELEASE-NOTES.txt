@@ -1,3 +1,7 @@
+Changes in Release 2.6.3
+=============================================
+[JOST-239] - Switch to use new XML Tooling HostnameVerifier impl 
+
 Changes in Release 2.6.2
 =============================================
 [JOST-223] - Misspelled error constant in SAML 1 StatusCode interface
