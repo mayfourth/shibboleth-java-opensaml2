@@ -87,7 +87,7 @@ public class HTTPSOAP11EncoderTest extends BaseTestCase {
         assertEquals("Unexpected character encoding", response.getCharacterEncoding(), "UTF-8");
         assertEquals("Unexpected cache controls", "no-cache, no-store", response.getHeader("Cache-control"));
         assertEquals("http://www.oasis-open.org/committees/security", response.getHeader("SOAPAction"));
-        assertEquals(2034125980, response.getContentAsString().hashCode());
+        assertEquals(-227316372, response.getContentAsString().hashCode());
     }
     
     /**
@@ -153,6 +153,6 @@ public class HTTPSOAP11EncoderTest extends BaseTestCase {
         assertEquals("Unexpected character encoding", response.getCharacterEncoding(), "UTF-8");
         assertEquals("Unexpected cache controls", "no-cache, no-store", response.getHeader("Cache-control"));
         assertEquals("http://www.oasis-open.org/committees/security", response.getHeader("SOAPAction"));
-        assertEquals(1218694958, response.getContentAsString().hashCode());
+        assertEquals(-830204930, response.getContentAsString().hashCode());
     }
 }
