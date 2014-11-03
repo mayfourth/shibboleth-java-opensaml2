@@ -1,3 +1,7 @@
+Changes in Release 2.6.4
+=============================================
+Remove endorsement of Xerces and Xalan (for further info see SIDP-619).
+
 Changes in Release 2.6.3
 =============================================
 [JOST-239] - Switch to use new XML Tooling HostnameVerifier impl 
