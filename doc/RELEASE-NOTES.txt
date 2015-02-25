@@ -1,3 +1,7 @@
+Changes in Release 2.6.5
+=============================================
+[JOST-240] - Allow reloading metadata providers to accept a null Timer
+
 Changes in Release 2.6.4
 =============================================
 Remove endorsement of Xerces and Xalan (for further info see SIDP-619).
