@@ -91,8 +91,7 @@ public abstract class AbstractReloadingMetadataProvider extends AbstractObservab
 
     /** Constructor. */
     protected AbstractReloadingMetadataProvider() {
-        taskTimer = new Timer(true);
-        createdOwnTaskTimer = true;
+        this(null);
     }
 
     /**
@@ -102,9 +101,13 @@ public abstract class AbstractReloadingMetadataProvider extends AbstractObservab
      */
     protected AbstractReloadingMetadataProvider(Timer backgroundTaskTimer) {
         if (backgroundTaskTimer == null) {
-            throw new IllegalArgumentException("Task timer may not be null");
+            log.debug("Creating own background task Timer instance");
+            taskTimer = new Timer(true);
+            createdOwnTaskTimer = true;
+        } else {
+            log.debug("Using ctor arg-supplied background task Timer instance");
+            taskTimer = backgroundTaskTimer;
         }
-        taskTimer = backgroundTaskTimer;
     }
 
     /**
