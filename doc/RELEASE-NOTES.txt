@@ -1,3 +1,7 @@
+Changes in Release 2.6.6
+=============================================
+[JOST-245] - BaseSAML2MessageDecoder tries to get SAML1 role descriptor
+
 Changes in Release 2.6.5
 =============================================
 [JOST-240] - Allow reloading metadata providers to accept a null Timer
