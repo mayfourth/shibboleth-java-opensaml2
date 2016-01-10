@@ -1,6 +1,7 @@
 Changes in Release 2.6.6
 =============================================
 [JOST-243] - Metadata reload errors logged on DEBUG only
+[JOST-244] - durations in log messages should be given in ISO format, not milliseconds
 [JOST-245] - BaseSAML2MessageDecoder tries to get SAML1 role descriptor
 
 Changes in Release 2.6.5
