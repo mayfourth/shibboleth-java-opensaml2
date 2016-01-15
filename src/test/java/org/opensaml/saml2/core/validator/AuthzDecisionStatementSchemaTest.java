@@ -59,10 +59,10 @@ public class AuthzDecisionStatementSchemaTest extends BaseSAMLObjectValidatorTes
         assertValidationFail("Resource was null, should raise a Validation Exception");
 
         authzDecisionStatement.setResource("");
-        assertValidationFail("Resource was empty string, should raise a Validation Exception");
+        assertValidationPass("Resource was empty string, should not raise a Validation Exception");
         
         authzDecisionStatement.setResource("    ");
-        assertValidationFail("Resource was white space, should raise a Validation Exception");
+        assertValidationPass("Resource was white space, should not raise a Validation Exception");
     }
 
     /**

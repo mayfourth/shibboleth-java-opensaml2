@@ -116,4 +116,19 @@ public class AuthzDecisionStatementTest extends BaseSAMLObjectProviderTestCase {
         
         assertEquals(expectedChildElementsDOM, authzDecisionStatement);
     }
+    
+    public void testResource() {
+        AuthzDecisionStatement authzDecisionStatement = (AuthzDecisionStatement) buildXMLObject(AuthzDecisionStatement.DEFAULT_ELEMENT_NAME);
+        
+        authzDecisionStatement.setResource("urn:test:foo");
+        assertEquals("urn:test:foo", authzDecisionStatement.getResource());
+        
+        authzDecisionStatement.setResource("");
+        assertEquals("", authzDecisionStatement.getResource());
+        
+        // 3 spaces
+        authzDecisionStatement.setResource("   ");
+        assertEquals("   ", authzDecisionStatement.getResource());
+    }
+     
 }
